@@ -1,0 +1,26 @@
+body
+{
+    padding-top: 120px;
+    font-family: Arial, serif;
+}
+
+.container
+{
+    width: 500px;
+    margin: 0 auto;
+}
+
+a:link,
+a:visited
+{
+    color: slategray;
+    text-decoration: none;
+    border-bottom: 1px dotted slategray;
+}
+
+a:hover
+{
+    color : #777;
+    border-bottom-color: #444;
+}
+
