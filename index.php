@@ -1,3 +1,9 @@
+<?php
+include_once('includes/connection.php');
+
+echo time();
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,7 +16,7 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html" id="logo">CMS</a>
+        <a href="index.php" id="logo">CMS</a>
 
         <ol>
             <li><a href="article.php?id=1">Article title</a> - <small>posted 10th Jan</small></li>
