@@ -1,7 +1,13 @@
 <?php
 include_once('includes/connection.php');
+include_once ('includes/article.php');
 
-echo time();
+$article = new Article();
+$articles =$article->fetch_all();
+
+//print_r($articles);
+
+//echo time();
 ?>
 
 <!doctype html>
@@ -19,7 +25,16 @@ echo time();
         <a href="index.php" id="logo">CMS</a>
 
         <ol>
-            <li><a href="article.php?id=1">Article title</a> - <small>posted 10th Jan</small></li>
+            <?php
+            foreach ($articles as $art) {
+            ?>
+            <li>
+                <a href="article.php?id=<?php echo $art['art_id']; ?>>">
+                    <?php echo $art['art_title']; ?>
+                </a>
+                - <small>posted <?php echo date('l jS', $art['art_timestamp']); ?></small>
+            </li>
+            <?php } ?>
         </ol>
     </div>
 </body>
