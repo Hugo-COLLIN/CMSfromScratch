@@ -24,3 +24,8 @@ a:hover
     border-bottom-color: #444;
 }
 
+small
+{
+    color: #999;
+    font-style:italic;
+}
