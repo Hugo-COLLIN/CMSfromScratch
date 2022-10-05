@@ -1,6 +1,6 @@
 <?php
 include_once('includes/connection.php');
-include_once ('includes/article.php');
+include_once ('includes/Article.php');
 
 $article = new Article();
 $articles =$article->fetch_all();
