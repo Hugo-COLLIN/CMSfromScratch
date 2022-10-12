@@ -33,3 +33,15 @@ small
 p {
     line-height: 2em;
 }
+
+a#logo
+{
+    display: inline-block;
+    margin-bottom: 1em;
+}
+
+#errMsg
+{
+    color: #a00;
+    margin-bottom: 1em;
+}
