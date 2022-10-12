@@ -24,6 +24,15 @@ if (isset($_GET["id"]))
     <div class="container">
         <a href="index.php" id="logo">CMS</a>
 
+        <h4>
+            <?php echo $data['art_title'] ?>
+            <small>posted <?php echo date('l jS', $data['art_timestamp']) ?></small>
+        </h4>
+        <p>
+            <?php echo $data['art_content']; ?>
+        </p>
+
+        <a href="./">&larr; Back</a>
     </div>
     </body>
     </html>

@@ -29,7 +29,7 @@ $articles =$article->fetch_all();
             foreach ($articles as $art) {
             ?>
             <li>
-                <a href="article.php?id=<?php echo $art['art_id']; ?>>">
+                <a href="article.php?id=<?php echo $art['art_id']; ?>">
                     <?php echo $art['art_title']; ?>
                 </a>
                 - <small>posted <?php echo date('l jS', $art['art_timestamp']); ?></small>
