@@ -36,10 +36,10 @@ else
     <div class="container">
         <h2><a href="index.php" id="logo">CMS</a></h2>
 
-        <?php if (isset($error)) { ?>
-            <small id="errMsg"><?php echo $error; ?></small>
+        <small id="errMsg">
+            <?php if (isset($error)) echo $error; ?>
             <br><br>
-        <?php } ?>
+        </small>
 
         <form id="formLogin" action="./" method="post" autocomplete="off">
             <input type="text" name="username" placeholder="Username">
