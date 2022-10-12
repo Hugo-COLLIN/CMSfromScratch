@@ -17,7 +17,7 @@ if (isset($_GET["id"]))
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>CMS Tutorial</title>
+        <title><?php echo $data['art_title'] . " posted " . date('l jS', $data['art_timestamp']) ?> - CMS Tutorial</title>
         <link rel="stylesheet" href="assets/style.css">
     </head>
     <body>
