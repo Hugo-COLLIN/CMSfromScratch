@@ -15,10 +15,27 @@ else
     if (isset($_POST['username'], $_POST['password']))
     {
         $uname = $_POST['username'];
-        $pwd = $_POST['password'];
+        $pwd = md5($_POST['password']);
 
         if (empty($uname) OR empty($pwd))
             $error = "All fields are required !";
+        else
+        {
+            $query = $pdo->prepare("SELECT * FROM Users WHERE user_name = ? AND user_pwd = ?");
+
+            $query->bindValue(1, $uname);
+            $query->bindValue(2, $pwd);
+            $query->execute();
+
+            $num = $query->rowCount();
+
+            if ($num == 1) {
+                $_SESSION['logged_in'] = true;
+                header('Location: index.php');
+                exit();
+            }
+            else $error = "Incorrect username or password";
+        }
     }
     ?>
 

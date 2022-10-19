@@ -8,7 +8,7 @@ $articles =$article->fetch_all();
 //print_r($articles);
 
 //echo time();
-//echo md5('password');
+//echo md5('admin');
 ?>
 
 <!doctype html>
